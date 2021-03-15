@@ -1,20 +1,9 @@
+import { GenreResponseProps, MovieProps } from "../App";
 import { MovieCard } from "./MovieCard";
 
 interface ContentProps {
-  selectedGenre: {
-    id: number;
-    name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-    title: string;
-  }
-  movies: Array<{
-    Title: string;
-    Poster: string;
-    Ratings: Array<{
-      Source: string;
-      Value: string;
-    }>;
-    Runtime: string;
-  }>
+  selectedGenre: GenreResponseProps;
+  movies: Array<MovieProps>
 }
 
 export function Content({ selectedGenre, movies }: ContentProps) {
